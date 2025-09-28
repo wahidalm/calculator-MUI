@@ -11,7 +11,7 @@ import BackspaceIcon from "@mui/icons-material/Backspace";
 
 export default function Home() {
   const [result, setResult] = useState("0");
-  const displayRef = useRef<HTMLDivElement>(null);
+  const displayRef = useRef(null);
 
   useEffect(() => {
     if (displayRef.current) {
