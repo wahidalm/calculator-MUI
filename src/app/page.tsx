@@ -20,7 +20,7 @@ export default function Home() {
   }, [result]);
 
   const handleDigitClick = (value) => {
-    let newResult = result + value;
+    const newResult = result + value;
     if (newResult.startsWith("0") && newResult.length > 1) {
       setResult(newResult.substring(1));
     } else {
@@ -79,7 +79,7 @@ export default function Home() {
   };
 
   const handleBackspace = () => {
-    let newResult = result;
+    const newResult = result;
     if (newResult.length > 1) {
       setResult(newResult.slice(0, -1));
     } else {
