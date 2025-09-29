@@ -29,16 +29,16 @@ export default function Home() {
   };
 
   const handleEqualClick = () => {
-    setResult(eval(result).toString(10));
-  };
-  // try {
-  //     const calculationString = result.replaceAll('\n', '');
-  //     const evalResult = new Function('return ' + calculationString)();
-  //     setResult(evalResult.toString());
-  //   } catch (error) {
-  //     setResult("Error");
-  //   }
+  //   setResult(eval(result).toString(10));
   // };
+  try {
+      const calculationString = result.replaceAll('\n', '');
+      const evalResult = new Function('return ' + calculationString)();
+      setResult(evalResult.toString());
+    } catch (error) {
+      setResult("Error");
+    }
+  };
 
   //   const handleOperandClick = (value) => {
   //   if (result === '0' && value === '-') {
